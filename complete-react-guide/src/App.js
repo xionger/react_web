@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <p>Hello, React!</p>
         <Person name="Max" age="28" />
-        <Person name="Joe" age="18" />
+        <Person name="Joe" age="18">Hobby: basketball</Person>
         <Person name="Mike" age="38" />
       </header>
     </div>
