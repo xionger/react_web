@@ -5,18 +5,18 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [
-      {name: "Max", age: 28},
-      {name: "Manu", age: 29},
-      {name: "Joe", age: 18}
+      {id: 'asgsgd', name: "Max", age: 28},
+      {id: 'dsg', name: "Manu", age: 29},
+      {id: 'ety', name: "Joe", age: 18}
     ],
     showPersons: false
   };
 
   changeNameHandler = (e) => {
     this.setState({persons: [
-      {name: "Max", age: 28},
-      {name: e.target.value, age: 29},
-      {name: "Joe", age: 16}
+      {id: 'asgsgd', name: "Max", age: 28},
+      {id: 'dsg', name: e.target.value, age: 29},
+      {id: 'ety', name: "Joe", age: 16}
     ]});
   }
 
@@ -47,8 +47,9 @@ class App extends Component {
           { this.state.persons.map((person, index) => {
               return (
                 <Person 
+                  key={person.id}
                   name={person.name} 
-                  age={Person.age}
+                  age={person.age}
                   click={() => this.deletePersonHandler(index)} />
               );
             })
