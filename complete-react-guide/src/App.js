@@ -67,9 +67,18 @@ class App extends Component {
       style.backgroundColor = 'red';
     }
 
+    let classes = [];
+    if (this.state.persons.length <= 2) {
+      classes.push('red');
+    }
+    if (this.state.persons.length <= 1) {
+      classes.push('bold');
+    }
+
     return (
       <div className="App">
           <p>Hello, React!</p>
+          <p className={classes.join(' ')}>This is a dynamic class.</p>
           <button style={style} onClick={this.togglePersonsHandler}>Toggle Persons!</button>
           { persons }
       </div>
