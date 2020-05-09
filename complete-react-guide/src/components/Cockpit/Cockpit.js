@@ -34,7 +34,7 @@ const cockpit = (props) => {
 
     return (
         <div>
-            <p>Hello, React!</p>
+            <p>{props.title}</p>
             <p className={classes.join(' ')}>This is a dynamic class.</p>
             <button 
                 style={style} 
